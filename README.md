@@ -21,6 +21,32 @@ A comprehensive news portal and Content Management System (CMS) built using the 
 
 Ensure the following tools are installed on your local environment:
 
+Fitur Utama
+
+Landing page menampilkan berita terbaru
+
+Manajemen berita (Create, Read, Update, Delete)
+
+Kategori berita
+
+Filter & pencarian berita
+
+Berdasarkan judul
+
+Berdasarkan kategori
+
+Berdasarkan tanggal publikasi
+
+Dashboard admin
+
+Autentikasi (Login & Logout)
+
+Export data user
+
+REST API untuk berita & kategori
+
+Pagination & sorting data
+
 * **PHP** (8.1 or higher)
 * **Composer**
 * **Node.js & npm** (for asset compilation)
