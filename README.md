@@ -37,4 +37,4 @@ Follow these steps to set up and configure the project locally:
 
 ```bash
 git clone <repository_url>
-cd laravel-news-portal
+cd portal-berita
