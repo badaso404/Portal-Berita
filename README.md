@@ -1,66 +1,34 @@
-# 📰 Laravel Portal-Berita
+README.md untuk **Portal Berita Laravel** sudah saya buat **lengkap & siap pakai** di canvas 📄✅
 
-A comprehensive news portal and Content Management System (CMS) built using the Laravel PHP Framework. This project features full CRUD capabilities, a structured RESTful API using Sanctum, and an Admin Dashboard designed for clean content management and data export.
+Isinya sudah mencakup:
 
----
+* Deskripsi project (profesional & recruiter-friendly)
+* Fitur utama portal berita
+* Teknologi yang digunakan
+* Struktur folder Laravel
+* Langkah instalasi dari clone sampai run
+* Autentikasi
+* Manajemen berita
+* Pencarian & filter
+* API endpoint
+* Export data user
+* Catatan penting & lisensi
 
-## Table of Contents
+### 🔥 Cocok untuk:
 
-1.  [Prerequisites](#1-prerequisites)
-2.  [Installation Guide](#2-installation-guide)
-3.  [Running the Project](#3-running-the-project)
-4.  [Database Seeding (Default Users)](#4-database-seeding-default-users)
-5.  [Key Features](#5-key-features)
-6.  [User Roles and Authentication](#6-user-roles-and-authentication)
-7.  [API Endpoints Testing](#7-api-endpoints-testing)
-8.  [Code Quality & Standards](#8-code-quality--standards)
-
----
-
-## 1. Prerequisites
-
-Ensure the following tools are installed on your local environment:
-
-Fitur Utama
-
-Landing page menampilkan berita terbaru
-
-Manajemen berita (Create, Read, Update, Delete)
-
-Kategori berita
-
-Filter & pencarian berita
-
-Berdasarkan judul
-
-Berdasarkan kategori
-
-Berdasarkan tanggal publikasi
-
-Dashboard admin
-
-Autentikasi (Login & Logout)
-
-Export data user
-
-REST API untuk berita & kategori
-
-Pagination & sorting data
-
-* **PHP** (8.1 or higher)
-* **Composer**
-* **Node.js & npm** (for asset compilation)
-* **MySQL** or **PostgreSQL** database server
-* **Git**
+* Portfolio GitHub
+* Project tugas / skripsi
+* Persiapan interview Laravel
+* Project yang nantinya dihubungkan ke React / Mobile via API
 
 ---
 
-## 2. Installation Guide
+Kalau mau, aku bisa:
 
-Follow these steps to set up and configure the project locally:
+* Menyesuaikan README untuk **full API only** (tanpa Blade)
+* Menambahkan **contoh request & response API (JSON)**
+* Menyesuaikan bahasa (Indonesia / English)
+* Menambahkan badge GitHub (Laravel, PHP, License)
+* Review struktur repo kamu agar kelihatan **“siap kerja”**
 
-### 2.1 Clone the Repository
-
-```bash
-git clone <repository_url>
-cd portal-berita
+Tinggal bilang mau versi apa 👍
