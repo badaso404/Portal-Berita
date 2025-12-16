@@ -1,4 +1,4 @@
-# 📰 Laravel News Portal
+# 📰 Laravel Portal-Berita
 
 A comprehensive news portal and Content Management System (CMS) built using the Laravel PHP Framework. This project features full CRUD capabilities, a structured RESTful API using Sanctum, and an Admin Dashboard designed for clean content management and data export.
 
