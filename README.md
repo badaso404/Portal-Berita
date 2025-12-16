@@ -34,7 +34,7 @@ Aplikasi **Portal Berita** berbasis **Laravel** yang digunakan untuk mengelola d
 
 ---
 
-## 📁 Struktur Project (Ringkas)
+## 📁 Struktur Project 
 
 ```
 app/
@@ -156,64 +156,65 @@ Fitur pencarian mendukung:
 
 ## 🔗 API Endpoint
 
-### 📌 Berita
+### 📌 Public
 
-| Method | Endpoint         | Deskripsi     |
-| ------ | ---------------- | ------------- |
-| GET    | /api/berita      | List berita   |
-| GET    | /api/berita/{id} | Detail berita |
-| POST   | /api/berita      | Tambah berita |
-| PUT    | /api/berita/{id} | Update berita |
-| DELETE | /api/berita/{id} | Hapus berita  |
+| Method | Endpoint                    | Description             | Parameters       |
+| :----- | :-------------------------- | :---------------------- | :--------------- |
+| `GET`  | `/api/news`                 | List all published news | `?page=1`        |
+| `GET`  | `/api/news/search`          | Search news             | `?title=keyword` |
+| `GET`  | `/api/news/category/{slug}` | Get news by category    | -                |
+| `GET`  | `/api/news/{id}`            | Get article detail      | -                |
 
-### 📌 Kategori
+### 📌 Admin 
 
-| Method | Endpoint      | Deskripsi     |
-| ------ | ------------- | ------------- |
-| GET    | /api/kategori | List kategori |
-
----
-
-## 📤 Export Data User
-
-* Export data user ke format file (CSV / Excel)
-* Digunakan untuk kebutuhan laporan admin
+| Method   | Endpoint               | Description        |
+| :------- | :--------------------- | :----------------- |
+| `POST`   | `/api/admin/news`      | Create new article |
+| `PUT`    | `/api/admin/news/{id}` | Update article     |
+| `DELETE` | `/api/admin/news/{id}` | Delete article     |
 
 ---
 
-## 🧪 Testing (Opsional)
+## 🧪 How to Try in Postman
+
+You can easily test the API endpoints using Postman.
+
+### A. Testing Public Routes
+
+1.  Open **Postman**.
+2.  Create a new Request.
+3.  Set Method to `GET` and URL to `http://localhost:8000/api/news`.
+4.  Go to the **Headers** tab and add:
+    -   Key: `Accept`
+    -   Value: `application/json`
+5.  Click **Send**. You will see the list of articles.
+
+### B. Testing Protected (Admin) Routes
+
+Since this is an API, you normally need an **Access Token**. For development testing, you can generate one quickly using Laravel Tinker:
+
+**Step 1: Generate a Token**
+Run this command in your terminal:
 
 ```bash
-php artisan test
+php artisan tinker
 ```
 
----
+Then paste these lines:
 
-## 📌 Catatan Penting
+```php
+$user = \App\Models\User::where('email', 'admin@admin.com')->first();
+$token = $user->createToken('PostmanTest')->plainTextToken;
+echo $token;
+```
 
-* Pastikan folder `storage` dan `bootstrap/cache` memiliki permission write
-* Gunakan `php artisan optimize` untuk production
+Copy the long string printed (the token).
 
----
+**Step 2: Use Token in Postman**
 
-## 🤝 Kontribusi
-
-Kontribusi sangat terbuka.
-
-1. Fork repository
-2. Buat branch baru
-3. Commit perubahan
-4. Pull Request
-
----
-
-## 📄 Lisensi
-
-Project ini menggunakan lisensi **MIT**.
-
----
-
-## 👨‍💻 Author
-
-**Portal Berita Laravel**
-Dikembangkan sebagai project pembelajaran dan portfolio backend Laravel.
+1.  Create a request (e.g., `POST` `http://localhost:8000/api/admin/news`).
+2.  Go to the **Authorization** tab.
+3.  Select Type: **Bearer Token**.
+4.  Paste the token you copied into the **Token** field.
+5.  Go to **Body** -> **form-data** to send data (e.g., `title`, `content`, `category_id`, `image`).
+6.  Click **Send**.
